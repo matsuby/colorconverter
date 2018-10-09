@@ -1,5 +1,5 @@
 const config = {
-  'production': {
+  production: {
     mode: 'production',
     entry: ['@babel/polyfill', './src/colorconverter.js'],
     output: {
@@ -27,7 +27,7 @@ const config = {
       ],
     },
   },
-  'development': {
+  development: {
     mode: 'development',
     entry: './src/colorconverter.js',
     output: {
@@ -42,7 +42,7 @@ const target = process.env.NODE_ENV;
 if (!target) {
   module.exports = Object.values(config);
 } else if (target === 'production') {
-  module.exports = config['production'];
+  module.exports = config.production;
 } else if (target === 'development') {
-  module.exports = config['development'];
+  module.exports = config.development;
 }
